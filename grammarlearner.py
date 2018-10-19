@@ -88,11 +88,11 @@ def train_srn(training_set, testing_set, nepochs, rnn, optimizer, criterion,
 
             if (eval_single_output_fn is not None):
                 if i == (nepochs -1):
-                    print('\tTraining Accuracy:\t', round(eval_set(ts, rnn, all_letters, eval_single_output_fn, verbose)*100,2), '%', sep='')
-                    print('\tTesting Accuracy:\t', round(eval_set(testing_set, rnn, all_letters, eval_single_output_fn)*100,2), '%', sep='')
+                    print('\tTraining Accuracy:\t', round(eval_set(ts, rnn, all_letters, eval_single_output_fn, verbose)*100,4), '%', sep='')
+                    print('\tTesting Accuracy:\t', round(eval_set(testing_set, rnn, all_letters, eval_single_output_fn)*100,4), '%', sep='')
                 else:
-                    print('\tTraining Accuracy:\t', round(eval_set(ts, rnn, all_letters, eval_single_output_fn)*100,2),'%',sep='')
-                    print('\tTesting Accuracy:\t', round(eval_set(testing_set, rnn, all_letters, eval_single_output_fn)*100,2),'%',sep='')
+                    print('\tTraining Accuracy:\t', round(eval_set(ts, rnn, all_letters, eval_single_output_fn)*100,4),'%',sep='')
+                    print('\tTesting Accuracy:\t', round(eval_set(testing_set, rnn, all_letters, eval_single_output_fn)*100,4),'%',sep='')
         # calculate total loss
 
         # calculate avg
